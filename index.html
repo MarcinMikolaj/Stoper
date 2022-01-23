@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marcin Mikołajczyk">
+    <meta name="description" content="Stoper do mierzenia czasu i jego zapisywanie">
+    <meta name="keywords" content="Stoper, mierzenie czasu, odliczanie czasu">
+    <title>Stoper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/91d2f81fc7.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="navigation"></nav>
+    <main class="main">
+        <section class="stoper-section">
+            <i class="fas fa-question open-info-panel panel-icone"></i>
+            <i class="fas fa-paint-brush panel-icone"></i>
+            <h1 class="stoper-section-title">Stoper</h1>
+            <p class="time-display">0:00</p>
+            <p class="last-saved-time"></p>
+            <div class="buttons">
+                <button class="button startBtn"><i class="fas fa-play"></i></button>
+                <button class="button pauseBtn"><i class="fas fa-pause"></i></button>
+                <button class="button stopBtn"><i class="fas fa-stop"></i></button>
+                <button class="button resetBtn"><i class="fas fa-trash-restore"></i></button>
+                <button class="button addRoundBtn">dodaj</button>
+                <button class="button archiveBtn">rundy</button>
+
+            </div>
+            <ul class="timed-round-list"></ul>
+            <ul class="color-panel">
+                <li><i class="fas fa-circle blue-color-p"></i></li>
+                <li><i class="fas fa-circle green-color-p"></i></li>
+                <li><i class="fas fa-circle orange-color-p"></i></li>
+            </ul>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>&copy 2022 | <span>Marcin Mikołajczyk</span></p>
+    </footer>
+
+    <div class="helper">
+        <i class="fas fa-times close-info-panel"></i>
+        <h3>Instrukcja:</h3>
+        <ul>
+            <li>
+                <p><i class="fas fa-play"></i> - start</p>
+            </li>
+            <li>
+                <p><i class="fas fa-pause"></i> - pause</p>
+            </li>
+            <li>
+                <p><i class="fas fa-stop"></i> - stop</p>
+            </li>
+            <li>
+                <p><i class="fas fa-trash-restore"></i> - reset</p>
+            </li>
+            <li>
+                <p><span>ARCHIWUM</span> - pokazuje zapisane rundy</p>
+            </li>
+            <li>
+                <p><span>DODAJ</span> - dodaje nową runde</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="round-panel">
+        <h3>Wpisz tytuł rundy</h3>
+        <input class="roundtitle-input" type="text" placeholder="wpisz..." />
+        <div class="add-roundtitle-panel-buttons">
+            <button class="add-roundtitle-btn round-panel-btn">Akceptuj</button>
+            <button class="close-roundtitle-btn round-panel-btn">Anuluj</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
